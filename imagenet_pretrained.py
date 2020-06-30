@@ -1,13 +1,13 @@
-from tensorflow import keras
-from keras.applications import ResNet50
-from keras.applications import InceptionV3
+
+from tensorflow.keras.applications import ResNet50
+from tensorflow.keras.applications import InceptionV3
 from tensorflow.keras.applications import Xception
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.applications import VGG19
-from keras.applications import imagenet_utils
-from keras.applications.inception_v3 import preprocess_input
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing.image import load_img
+from tensorflow.keras.applications import imagenet_utils
+from tensorflow.keras.applications.inception_v3 import preprocess_input
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
 import numpy as np
 from argparse import ArgumentParser
 import cv2
@@ -18,7 +18,7 @@ ap = ArgumentParser()
 ap.add_argument("-i", "--image", 
                 required=True, 
                 help="Path to the input image...")
-ap.add_argument("model", "--model", 
+ap.add_argument("-model", "--model", 
                 required=True, 
                 default="vgg16", 
                 help="name of pre-trained network to be used")
